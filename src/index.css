@@ -1,0 +1,355 @@
+/* -------------------------------
+🔥 GLOBAL THEME – CYBER GEN-Z
+--------------------------------*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #0a0a0f;
+  font-family: "Inter", "Poppins", sans-serif;
+  color: #e6e6e6;
+  line-height: 1.5;
+  overflow-x: hidden;
+}
+
+/* Smooth animations */
+:root {
+  --blue: #3d63ff;
+  --green: #4cffd7;
+  --pink: #ff5cf4;
+  --card-bg: rgba(255, 255, 255, 0.05);
+  --border: rgba(255, 255, 255, 0.1);
+}
+
+/* -------------------------------
+🔥 PAGE LAYOUT
+--------------------------------*/
+.page, .users1-page {
+  width: 100%;
+  padding: 40px;
+  color: white;
+}
+
+h1 {
+  font-size: 42px;
+  font-weight: 800;
+  margin-bottom: 25px;
+  background: linear-gradient(90deg, var(--blue), var(--pink));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* -------------------------------
+🔍 SEARCH BAR
+--------------------------------*/
+.search-box {
+  width: 100%;
+  padding: 15px 18px;
+  border-radius: 12px;
+  border: 2px solid var(--border);
+  background: rgba(255,255,255,0.08);
+  color: white;
+  font-size: 18px;
+  margin-bottom: 25px;
+  transition: 0.25s ease;
+}
+
+.search-box:focus {
+  border-color: var(--blue);
+  box-shadow: 0 0 12px var(--blue);
+  outline: none;
+}
+
+/* -------------------------------
+👤 USER CARD – GLASS + GLOW
+--------------------------------*/
+.user-card {
+  background: var(--card-bg);
+  backdrop-filter: blur(10px);
+  border: 1px solid var(--border);
+  padding: 18px 22px;
+  border-radius: 18px;
+  margin-bottom: 18px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: 0.25s ease;
+}
+
+.user-card:hover {
+  border-color: var(--blue);
+  box-shadow: 0 0 20px rgba(61, 99, 255, 0.35);
+  transform: translateY(-3px);
+}
+
+.addr {
+  font-size: 19px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+.nickname {
+  font-size: 15px;
+  margin-top: 4px;
+  opacity: 0.8;
+}
+
+/* -------------------------------
+✨ HOVER CARD – FUTURISTIC TOOLTIP
+--------------------------------*/
+.left {
+  position: relative;
+}
+
+.hover-card {
+  position: absolute;
+  bottom: 120%;
+  left: 0;
+  padding: 16px 20px;
+  border-radius: 14px;
+  background: rgba(0,0,0,0.85);
+  border: 1px solid var(--border);
+  width: 240px;
+  color: #dcdcdc;
+  box-shadow: 0 0 18px rgba(0,0,0,0.7);
+  transform: translateY(10px);
+  opacity: 0;
+  pointer-events: none;
+  transition: 0.25s ease;
+}
+
+.left:hover .hover-card {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+/* -------------------------------
+🔥 BUTTONS – NEON GEN-Z
+--------------------------------*/
+.btn {
+  background: var(--blue);
+  color: white;
+  padding: 10px 18px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 600;
+  transition: 0.25s ease;
+  box-shadow: 0 0 10px rgba(61, 99, 255, 0.4);
+}
+
+.btn:hover {
+  box-shadow: 0 0 16px rgba(61, 99, 255, 0.8);
+  transform: translateY(-2px);
+}
+
+.btn.disabled {
+  background: #555;
+  box-shadow: none;
+  cursor: not-allowed;
+}
+
+.btn.highlight {
+  background: #16a34a;
+  box-shadow: 0 0 14px rgba(22,163,74,0.5);
+}
+
+.btn.danger {
+  background: #ff3d3d;
+  box-shadow: 0 0 12px rgba(255,61,61,0.6);
+}
+
+/* -------------------------------
+⭐ PROFILE FRIEND CARDS
+--------------------------------*/
+.friend-card {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  padding: 20px;
+  border-radius: 16px;
+  margin-bottom: 20px;
+  box-shadow: 0 0 15px rgba(255,255,255,0.05);
+}
+
+.text-input,
+.text-area {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  background: rgba(255,255,255,0.07);
+  color: white;
+}
+
+.text-input:focus,
+.text-area:focus {
+  border-color: var(--green);
+  box-shadow: 0 0 12px var(--green);
+  outline: none;
+}
+
+.text-area {
+  min-height: 100px;
+  resize: none;
+}
+
+/* -------------------------------
+👥 FRIEND REQUEST CARDS
+--------------------------------*/
+.card {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  padding: 16px;
+  border-radius: 14px;
+  margin-bottom: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+/* -----------------------------------
+✨ FIX FRIEND CARD SPACING + SOFTEN GLOW
+--------------------------------------*/
+.friend-card {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+
+  padding: 28px;           /* increased spacing */
+  margin-bottom: 28px;
+  border-radius: 20px;
+
+  box-shadow: 0 0 10px rgba(61, 99, 255, 0.15);   /* softer glow */
+  backdrop-filter: blur(10px);
+}
+
+/* Increase spacing between labels */
+.friend-card p,
+.friend-card h3 {
+  margin-bottom: 10px;
+}
+
+/* -----------------------------------
+✨ BUTTON IMPROVEMENTS
+--------------------------------------*/
+.friend-card .btn {
+  margin-right: 14px;               /* spacing between buttons */
+  border-radius: 10px;
+  padding: 12px 22px;
+  font-size: 16px;
+  transition: 0.2s ease;
+}
+
+/* Edit button (blue) */
+.friend-card .btn {
+  background: #3d63ff;
+  box-shadow: 0 0 8px rgba(61, 99, 255, 0.25);
+}
+
+.friend-card .btn:hover {
+  box-shadow: 0 0 12px rgba(61, 99, 255, 0.4);
+  transform: translateY(-1px);
+}
+
+/* Danger buttons (Unfriend / Block) */
+.friend-card .btn.danger {
+  background: #ff5252;
+  box-shadow: 0 0 8px rgba(255,82,82,0.25);
+}
+
+.friend-card .btn.danger:hover {
+  box-shadow: 0 0 12px rgba(255,82,82,0.4);
+}
+
+/* Reduce overall glow on user-card too */
+.user-card {
+  box-shadow: 0 0 10px rgba(61, 99, 255, 0.18);
+}
+
+.user-card:hover {
+  box-shadow: 0 0 14px rgba(61, 99, 255, 0.25);
+  transform: translateY(-2px);
+}
+/* ================================
+   🔵 FRIEND REQUESTS PAGE UPGRADE
+==================================*/
+
+.requests-page {
+  padding: 40px;
+  color: white;
+  max-width: 800px;
+  margin: auto;
+}
+
+/* Title */
+.requests-page h1 {
+  font-size: 60px;
+  font-weight: 900;
+  margin-bottom: 40px;
+  background: linear-gradient(90deg, #5566ff, #8a4bff);
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+/* Section Title */
+.requests-page h2 {
+  font-size: 34px;
+  font-weight: 800;
+  margin-top: 40px;
+  margin-bottom: 12px;
+  color: #e5e5ff;
+  text-shadow: 0 0 8px rgba(130, 130, 255, 0.4);
+}
+
+/* Empty state message */
+.empty-text {
+  font-size: 20px;
+  color: #b5b5d1;
+  opacity: 0.8;
+  margin-bottom: 20px;
+  animation: fadeIn 0.5s ease;
+}
+
+/* Request Card */
+.request-card {
+  background: rgba(255,255,255,0.05);
+  padding: 22px;
+  margin-bottom: 18px;
+  border-radius: 16px;
+  border: 1px solid rgba(255,255,255,0.12);
+  box-shadow: 0 0 15px rgba(120, 120, 255, 0.15);
+  backdrop-filter: blur(10px);
+  transition: 0.25s ease;
+}
+
+.request-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 0 20px rgba(120, 120, 255, 0.25);
+}
+
+/* Buttons inside request card */
+.request-card .btn {
+  padding: 10px 18px;
+  font-size: 16px;
+  border-radius: 10px;
+  margin-right: 12px;
+}
+
+/* Reject button styling */
+.btn.danger {
+  background: #ff4d4d;
+  box-shadow: 0 0 12px rgba(255, 77, 77, 0.3);
+}
+
+.btn.danger:hover {
+  background: #ff2e2e;
+}
+
+/* Animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(5px); }
+  to { opacity: 1; transform: translateY(0); }
+}
